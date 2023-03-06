@@ -87,3 +87,19 @@ function printTwite(msg: string) : void {
     console.log(msg)
 }
 
+// never - return type for a function
+// con never la function no se termina de ejecutar
+// se usa para funciones que retornan una expection o que nunca se ejecutan
+
+function makeError(msg: string) : never {
+    throw new Error(msg)
+}
+
+function gameLoop() : never {
+    while(true) {
+        console.log("game loop running")
+    }
+
+    //return true esto da error
+}
+
