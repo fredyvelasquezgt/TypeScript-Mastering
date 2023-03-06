@@ -75,5 +75,15 @@ colors.map(color => {
 })
 
 function blah(color) {
-
 }
+
+
+//void - se usa mas que todo con functions que no retornan nada
+// se usa para decir que una funcion no deberia de retornar nada
+// si la funcion retorna algo me va a avisar porque no se supone que haga eso
+
+function printTwite(msg: string) : void {
+    console.log(msg)
+    console.log(msg)
+}
+
