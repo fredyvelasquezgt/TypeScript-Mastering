@@ -64,3 +64,16 @@ function rando (num: number) {
 const add = (x: number, y: number) : number => {
     return x+y;
 }
+
+//anonymous functions
+
+const colors = ["red", "orange", "yellow"]
+
+//no tengo que especificar el tipo de datos que es color, porque sabe el contexto del array
+colors.map(color => {
+    return color.toLowerCase()
+})
+
+function blah(color) {
+
+}
