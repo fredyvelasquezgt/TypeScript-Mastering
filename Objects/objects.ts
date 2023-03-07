@@ -50,3 +50,37 @@ type Point = {
 
 type MyNum = number;
 let age : MyNum = 23423;
+
+// nested objects
+
+type Song = {
+    title: string, 
+    artist: string, 
+    numStreams: number, 
+    credits: 
+        {producer:string, 
+        writer:string}
+}
+
+function calculatePayout (song: Song) : number {
+    return song.numStreams * 0.033
+}
+
+function printSong(song: Song) : void {
+    console.log(`${song.title}`)
+}
+
+//esto lo puedo pasar de tipo Song
+const mySong: Song = {
+    title: "Imaginandote",
+    artist : "DY, Reykon",
+    numStreams : 123124,
+    credits: {
+        producer: "Mosty",
+        writer: "Bull Nene"
+    }
+}
+
+//cuando llamo la funcion le tengo que pasar segun el tipado que defini antes
+calculatePayout(mySong)
+
