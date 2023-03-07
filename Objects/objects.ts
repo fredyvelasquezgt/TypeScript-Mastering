@@ -31,22 +31,22 @@ printName({first: "Juan", last: "Garcia"})
 
 // es una forma de reusar un type y darle nombre
 
-let point : {x: number , y: number} = {x: 34, y: 2}
+// let point : {x: number , y: number} = {x: 34, y: 2}
 
-function randomCoordinate() : Point {
-    return {x: Math.random() , y: Math.random()};
-}
+// function randomCoordinate() : Point {
+//     return {x: Math.random() , y: Math.random()};
+// }
 
-function doublePoint (point: Point): Point{
-    return {x: point.x * 2 , y: point.y * 2 }
-}
+// function doublePoint (point: Point): Point{
+//     return {x: point.x * 2 , y: point.y * 2 }
+// }
 
-//si quiero crear un type:
+// //si quiero crear un type:
 
-type Point = {
-    x: number,
-    y: number;
-}
+// type Point = {
+//     x: number,
+//     y: number;
+// }
 
 type MyNum = number;
 let age : MyNum = 23423;
@@ -84,3 +84,26 @@ const mySong: Song = {
 //cuando llamo la funcion le tengo que pasar segun el tipado que defini antes
 calculatePayout(mySong)
 
+//optional properties
+
+//de momento solo he pedido cosas NECESARIAS, TS se queja si no le paso lo que me pide
+
+let point : {x: number , y: number} = {x: 34, y: 2}
+
+function randomCoordinate() : Point {
+    return {x: Math.random() , y: Math.random()};
+}
+
+function doublePoint (point: Point): Point{
+    return {x: point.x * 2 , y: point.y * 2 }
+}
+
+//si quiero crear un type:
+
+type Point = {
+    x: number,
+    y: number,
+    z? : number //esto hace que sea opcional
+}
+
+const myPoint : Point = {x:1 , y: 2} // no se queja porque z es opcional
