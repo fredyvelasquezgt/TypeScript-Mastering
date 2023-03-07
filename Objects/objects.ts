@@ -107,3 +107,53 @@ type Point = {
 }
 
 const myPoint : Point = {x:1 , y: 2} // no se queja porque z es opcional
+
+// the read-only keyword 
+//me ayuda a marcar props en el objecto a solo read-only
+
+type User = {
+    readonly id: number,
+    username : string
+}
+
+const user : User = {
+    id: 1234,
+    username: "Fredy"
+}
+
+console.log(user.id) //aqui solo lo imprime
+//user.id = 12321; //aqui se queja por supuestamente solo es readonly, no me deja modificarlo
+
+
+
+//Intersection Type
+// Puedo tener muchos types y combinarlos con el &
+
+type Circle = {
+    radius: number;
+}
+
+type Colorful = {
+    color: string;
+}
+
+//creo este nuevo type con los dos de arriba
+type ColorfulCircle = Circle & Colorful;
+
+const happyFace : ColorfulCircle = {
+    radius: 4,
+    color: "yellow"
+};
+
+type Cat = {
+    numLives:number
+}
+
+type Dog = {
+    breed : string
+}
+
+//creo un nuevo type y tambien le agrego la nueva propiedad
+type CatDog = Cat & Dog & {
+    age: number
+}
