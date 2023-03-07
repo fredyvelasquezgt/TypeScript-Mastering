@@ -16,3 +16,37 @@ function printName(person: {first: string, last: string}) : void {
 }
 
 printName({first: "Juan", last: "Garcia"})
+
+
+
+// let coordinate : {x: number , y: number} = {x: 34, y: 2}
+
+// function randomCoordinate() : {x: number, y: number} {
+//     return {x: Math.random() , y: Math.random()};
+// }
+
+//printName({first: "Juan" , last: "Jagger" , age: 473})
+
+//Create Type Aliases
+
+// es una forma de reusar un type y darle nombre
+
+let point : {x: number , y: number} = {x: 34, y: 2}
+
+function randomCoordinate() : Point {
+    return {x: Math.random() , y: Math.random()};
+}
+
+function doublePoint (point: Point): Point{
+    return {x: point.x * 2 , y: point.y * 2 }
+}
+
+//si quiero crear un type:
+
+type Point = {
+    x: number,
+    y: number;
+}
+
+type MyNum = number;
+let age : MyNum = 23423;
