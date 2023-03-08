@@ -7,4 +7,12 @@ const color: [number, number, number] = [255, 0 , 255];
 
 //usar multiples tipos, aqui el orden si importa:
 
-type Response = [number, string]
+//creo una tupla que almacena el formato de una request
+type HTTPResponse = [number, string];
+
+const goodRes: HTTPResponse = [200, "OK"]
+//goodRes[0] = "200"; no puedo hacer esto
+
+//las tuplas no me deniegan el permiso de hacer push despues de la declaracion
+
+goodRes.push(123)
