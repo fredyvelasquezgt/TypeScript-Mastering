@@ -20,10 +20,10 @@ goodRes.push(123)
 //las tuplas casi no se usan tanto pero es buena saberlas
 
 
-{
-    code: 200,
-    msg: "OK"
-}
+// {
+//     code: 200,
+//     msg: "OK"
+// }
 
 //puedo hacer un array de http responses - lo de abajo es un array de tuples
 const responses: HTTPResponse[] = [[404, "not found"], [200, "OK"]]
@@ -67,4 +67,11 @@ function isDelivered(status: OrderStatus) {
 }
 
 isDelivered(OrderStatus.RETURNED)
+
+enum ArrowKeys {
+    UP = "up",
+    DOWN = "down",
+    LEFT = "left",
+    RIGTH= "rigth"
+}
 
