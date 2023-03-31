@@ -49,3 +49,23 @@ const shoes: Product = {
         return this.price;
     }
 }
+
+interface Dog {
+    name: string,
+    age:number
+}
+
+
+interface Dog {
+    breed: string,
+    bark() :string;
+}
+
+const elton : Dog = {
+    name: 'elton',
+    age : 0.5,
+    breed : 'beagle',
+    bark() {
+        return "woof!"
+    }
+}
