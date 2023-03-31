@@ -69,3 +69,19 @@ const elton : Dog = {
         return "woof!"
     }
 }
+
+//inheritance
+
+interface ServiceDog extends Dog {
+    job: "drug sniffer" | "bomb" | "guide dog";
+}
+
+const chewy : ServiceDog = {
+    name: 'Chewy',
+    age: 0.5,
+    breed: 'boxer',
+    bark() {
+        return 'bark'
+    },
+    job: "guide dog"
+}
