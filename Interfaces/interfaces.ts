@@ -20,8 +20,9 @@ interface Person {
     readonly id: number, //el read only hace que no me deje cambiar el valor
     first: string,
     last: string,
-    nickname? : string //este es opcional
-    sayHi: () => string; // metodo que retorna un string
+    nickname? : string, //este es opcional
+    //sayHi: () => string; // metodo que retorna un string
+    sayHi(): string;
 }
 
 const thomas:Person = {
@@ -32,3 +33,19 @@ const thomas:Person = {
     sayHi: () => {return 'hello'}}
 
 //si intento cambiar los atributos despues no me va a dejar cambiar el id, el resto si
+
+interface Product {
+    name: string,
+    price: number,
+    applyDiscount(discount: number):number;
+}
+
+const shoes: Product = {
+    name: 'BLue Suede Shoes',
+    price: 100,
+    applyDiscount(amount: number) {
+        const newPrice =  this.price * (1-amount)
+        this.price = newPrice;
+        return this.price;
+    }
+}
