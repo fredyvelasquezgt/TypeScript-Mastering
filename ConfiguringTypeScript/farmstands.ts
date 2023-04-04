@@ -4,6 +4,6 @@ interface Product {
     quantity: number
 }
 
-const printProduct = (product: Product): void => {
+const printProductSummary = (product: Product): void => {
     console.log(`${product.name} - $${product.price}`)
 }

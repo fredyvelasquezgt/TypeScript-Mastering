@@ -11,3 +11,4 @@ const juniper = {
     name: 'juniper',
     age: 1
 };
+
