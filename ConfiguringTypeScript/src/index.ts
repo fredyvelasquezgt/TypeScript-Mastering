@@ -18,3 +18,10 @@ const juniper : Chicken = {
     name: 'juniper',
     age: 1
 }
+
+function doThing(thing){
+    console.log(thing);
+}
+
+
+let users: string[] = ["asd", "adsf"];
